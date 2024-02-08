@@ -1,0 +1,87 @@
+import random
+
+# cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+#
+# playing = True
+#
+# player_cards = []
+# computer_cards = []
+# player_score = 0
+# computer_score = 0
+#
+# while playing:
+#     if len(player_cards) < 2 or len(computer_cards) < 2:
+#         for deal in range(0, 2):
+#             player_cards.append(cards[random.randint(0, len(cards) - 1)])
+#             computer_cards.append(cards[random.randint(0, len(cards) - 1)])
+#
+#     player_score = sum(player_cards)
+#     computer_score = sum(computer_cards)
+#
+#     print(f"Your cards are: {player_cards} equalling {player_score}")
+#     print(f"The computers first card is: {computer_cards[0]}")
+#     player_turn = True
+#
+#     while player_turn:
+#         if player_score < 21:
+#             hit_or_stand = input("Hit or Stand")
+#             if hit_or_stand == "Hit":
+#                 new_card = cards[random.randint(0, len(cards) - 1)]
+#                 player_score += new_card
+#                 player_cards.append(new_card)
+#                 if 11 in player_cards and player_score > 21:
+#                     for i in range(0, len(player_cards)):
+#                         if player_cards[i] == 11:
+#                             player_cards[i] -= 10
+#                             player_score -= 10
+#                             break
+#                 print(player_cards, player_score)
+#             elif hit_or_stand == "Stand":
+#                 player_turn = False
+#         else:
+#             player_turn = False
+#
+#     print(
+#         f"The computers cards are: {computer_cards} with a score of {computer_score}"
+#     )
+#
+#     computer_turn = True
+#
+#     while computer_turn and computer_score < 21:
+#         if computer_score < 17 and player_score < 22:
+#             new_card = cards[random.randint(0, len(cards) - 1)]
+#             computer_score += new_card
+#             computer_cards.append(new_card)
+#             if 11 in computer_cards and computer_score > 21:
+#                 for i in range(0, len(computer_cards)):
+#                     if computer_cards[i] == 11:
+#                         computer_cards[i] -= 10
+#                         computer_score -= 10
+#                         break
+#             print(computer_cards, computer_score)
+#         else:
+#             computer_turn = False
+#
+#     if player_score > 21 and computer_score > 21:
+#         print("It's a draw! Both bust")
+#     elif computer_score > 21:
+#         print("You win the computer went bust!")
+#     elif player_score > 21:
+#         print("You lose you went bust!")
+#     elif computer_score == player_score:
+#         print(f"It's a draw both stood with {computer_score}")
+#     elif player_score > computer_score:
+#         print("You win you scored higher than the computer!")
+#     elif computer_score > player_score:
+#         print("You lost the computer scored higher!")
+#
+#     play_again = input(
+#         "Do you want to play again? type y for yes and n for no")
+#
+#     if play_again == "n":
+#         playing = False
+#     elif play_again == "y":
+#         player_cards = []
+#         computer_cards = []
+#         player_score = 0
+#         computer_score = 0
